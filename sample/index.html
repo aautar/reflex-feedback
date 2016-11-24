@@ -1,0 +1,34 @@
+<!DOCTYPE />
+<html>
+
+<head>
+    <title>Reflex Feedback Widget Test Page</title>
+    
+    <style type="text/css">
+        textarea { color:#068; }
+    </style>
+
+    <script type="text/javascript" src="../lib/reflex.js"></script>
+
+</head>
+    
+<body>
+
+    <div id="container">
+    </div>
+
+    <script type="text/javascript">
+        var feedbackWidget = Object.create(Reflex);
+        
+        feedbackWidget.init(document.getElementById('container'), "/feedback");
+        
+        feedbackWidget.show({
+            userPrompt: "Is there anything we could do to make this site better?",
+            sendButtonText: "Send"
+        });
+        
+    </script>
+
+</body>
+
+</html>
